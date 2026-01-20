@@ -1,6 +1,40 @@
 @import "vars"
 @import "fonts"
 
+// Cloud animations
+@keyframes cloudSlideIn
+    0%
+        transform: translateX(100%)
+        opacity: 0
+    60%
+        transform: translateX(0)
+        opacity: 1
+    100%
+        transform: translateX(0)
+        opacity: 1
+
+@keyframes cloudFloat
+    0%, 100%
+        transform: translate(0, 0)
+    25%
+        transform: translate(-0.6vw, -0.4vw)
+    50%
+        transform: translate(0.4vw, 0.6vw)
+    75%
+        transform: translate(0.6vw, -0.2vw)
+
+@keyframes photoFadeIn
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@keyframes zodiacPulse
+    0%, 100%
+        opacity: 1
+    50%
+        opacity: 0.6
+
 //start body style 
 body
     font-family: $main-font
@@ -237,6 +271,7 @@ a
     display: flex
     align-items: flex-end
     color: #fff
+    overflow: hidden
     .container-fluid
         z-index: 998
         position: relative
@@ -255,23 +290,29 @@ a
     right: 0
     position: absolute
     z-index: 998
+    opacity: 0.5
+    animation: photoFadeIn 3s ease-in-out forwards
 .zodiac 
     position: absolute 
     top: 1.46vw
     right: 0
     z-index: 98
     width: 52vw
+    opacity: 0
+    animation: photoFadeIn 3s ease-in-out 3s forwards, zodiacPulse 4s ease-in-out 6s infinite
 .cloud-2 
     position: absolute 
     right: 0 
     bottom: 0
     width: 52.396vw
+    animation: cloudSlideIn 20s ease-out forwards, cloudFloat 20s ease-in-out 15s infinite
 .cloud 
     position: absolute 
     right: 0 
     bottom: 7.396vw
     width: 58.125vw
     z-index: 99
+    animation: cloudSlideIn 30s ease-out forwards, cloudFloat 25s ease-in-out 20s infinite
 .main-title-wrapper
     font-family: $secondary-font
     text-align: right
@@ -311,6 +352,8 @@ a
     margin-left: 16.5vw
 .hero-photo-mob 
     display: none
+    opacity: 0.5
+    animation: photoFadeIn 3s ease-in-out forwards
 //end hero style
 
 @import "media"
