@@ -1,0 +1,208 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+	.header 
+		font-size: 1.2vw
+	.menu ul li a
+		font-size: 1.2vw
+	.logo img
+		width: 10vw
+	.lang-wrapper
+		margin-left: 3vw
+	.header .container-fluid
+		width: 95vw 
+		max-width: 95vw
+	.hero .container-fluid
+		width: 95vw 
+		max-width: 95vw
+	
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+	//start global media 
+	.h1 
+		font-size: 10.667vw
+	.button
+		height: 12.267vw
+		font-size: 4.8vw
+		white-space: nowrap
+		padding: 0.533vw
+		.button__text
+			padding-left: 4.267vw
+			padding-right: 4.267vw
+	//end global media
+
+	//start header media
+	.menu-wrapper 
+		display: none
+	.logo
+		img
+			width: 40.27vw
+	.header
+		padding-top: 9.33vw
+		padding-bottom: 9.33vw 
+		.container-fluid 
+			display: flex 
+			justify-content: center
+	.menu-btn
+		position: absolute 
+		top: 6.4vw
+		right: 4.27vw
+		display: block
+		cursor: pointer
+	.menu-btn__line 
+		width: 10.67vw
+		height: 0.53vw
+		background: #D9D9D9
+		margin-bottom: 2.13vw
+		&:last-child
+			margin-bottom: 0
+	.menu-wrapper.active 
+		position: fixed 
+		top: 0 
+		left: 0 
+		width: 100% 
+		height: auto
+		background: #F4F4F4
+		display: block
+		min-height: 100vh
+		padding-top: 25vw
+		padding-bottom: 25vw
+		padding-left: 7vw 
+		padding-right: 7vw
+		a 
+			color: #000
+			font-size: 5vw
+		.header__button 
+			background: linear-gradient(91.34deg, rgba(#005438, 1) -2.33%, rgba(#00BA7C, 1) 100%)
+			color: #fff 
+			height: 12.27vw
+			margin-left: 0
+	.menu ul 
+		flex-direction: column
+	.menu-btn.active .menu-btn__line 
+		background: #000
+	.menu ul li 
+		margin-bottom: 10vw
+		margin-right: 0
+		
+	
+	//end header media
+
+	//start hero media
+	.hero 
+		min-height: 216vw
+		background: url('../img/hero-mobile.png') no-repeat center center / cover
+	.hero 
+		overflow: hidden
+		height: 216.533vw
+	.hero-photo
+		display: none
+	.hero-photo-mob 
+		display: block
+		width: 100vw
+		height: auto
+		position: absolute 
+		bottom: 0
+		z-index: 998
+	.cloud,
+	.cloud-2 
+		display: none
+	.zodiac  
+		width: 130.667vw
+		top: 79vw
+		right: -16vw
+	.hero__social 
+		display: none
+	.hero .container-fluid 
+		align-items: flex-start
+	.hero 
+		align-items: flex-start
+		padding-top: 40.267vw
+	.main-title-wrapper 
+		text-align: center
+	.hero__content
+		margin-left: 0 
+		width: 100%
+		text-align: center
+	.hero
+		.container-fluid 
+			height: 100%
+		.button 
+			position: absolute
+			bottom: 7.2vw
+			left: 50%
+			transform: translateX(-50%)
+	.main-sub-title
+		font-size: 8.533vw
+	.hero__content
+		font-size: 5.867vw
+		margin-top:4.267vw
+	.hero__info 
+		margin-top: 82vw
+		text-align: left
+		margin-left: 0
+		padding-left: 3vw
+	.hero .container-fluid
+		width: 94vw 
+		max-width: 94vw
+	.hero__name
+		font-size: 6.4vw
+	.hero__profession 
+		font-size: 4.267vw
+	
+	//end hero media
+
+
+/* Extra Small Device s, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
+
+
+
+
