@@ -136,6 +136,9 @@ p
     span 
         font-weight: 600 
         font-style: italic
+.container-fluid--xs
+    width: 63.02vw
+    max-width: 90vw
 //end body style 
 
 //start header style 
@@ -577,7 +580,7 @@ p
 .education__content
     margin-top:7.08vw
 .slider-image-wrapper 
-    height: 16.5vw
+    height: 14vw
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)
     border-radius: 0.4vw
 .slider__item
@@ -611,7 +614,52 @@ p
 .next
     right: 0
     transform: translateY(-50%) translateX(250%)
+//end slider style 
 
+//start astro-glider style 
+.astro-glider 
+    position: relative
+    min-height: 56.3vw
+    background: #000
+    padding-top: 4.06vw
+    padding-bottom: 8.18vw   
+    .astro-glider-image
+        position: absolute 
+        top: 0 
+        right: 0 
+        height: 100%
+    .container-fluid 
+        position: relative
+        z-index: 2
+    .button  
+        margin-top: 2.08vw
+.astro-glider
+    color: #fff
+.astro-glider__text
+    font-size: 2.5vw
+    font-family: $secondary-font
+    width: 30vw
+    line-height: 1
+    margin-left: 10.42vw
+    span 
+        font-size: 5vw
+.astro-glider__item
+    display: flex
+    margin-bottom: 1vw
+.astro-glider__list
+    width: 45vw
+    margin-top: 2.29vw
+.astro-glider__title 
+    font-family: $secondary-font
+    font-size: 1.88vw
+    line-height: 1
+    margin-bottom: 0.1vw
+.astro-glider__icon
+    margin-right: 1.25vw
+    img 
+        width: 2.08vw
+        min-width: 2.08vw
+//end astro-glider style 
 @import "media"
 
 
