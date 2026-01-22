@@ -27,7 +27,9 @@ gulp.task('sass', function(){
 gulp.task('css', function(){
 	return gulp.src([
 		'node_modules/normalize.css/normalize.css',
-		'node_modules/slick-carousel/slick/slick.css'
+		'node_modules/slick-carousel/slick/slick.css',
+		'node_modules/slick-carousel/slick/slick-theme.css',
+		'node_modules/@fancyapps/ui/dist/fancybox/fancybox.css'
 		])
 	.pipe(sass({outputStyle: 'compressed'}))
 	.pipe(concat('libs.css'))
@@ -40,6 +42,17 @@ gulp.task('html', function(){
 	return gulp.src('app/*.html')
 	.pipe(browserSync.reload({stream: true}))
 
+});
+
+gulp.task('js', function(){
+	return gulp.src([
+		'node_modules/jquery/dist/jquery.min.js',
+		'node_modules/slick-carousel/slick/slick.min.js',
+		'node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js'
+	])
+	.pipe(concat('libs.min.js'))
+	.pipe(gulp.dest('app/js'))
+	.pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('script', function(){
@@ -84,4 +97,4 @@ gulp.task('watch', function(){
 
 gulp.task('build', gulp.series('clean', 'export'));
 
-gulp.task('default', gulp.parallel('css', 'sass', 'browser-sync', 'watch'))
+gulp.task('default', gulp.parallel('css', 'js', 'sass', 'browser-sync', 'watch'))

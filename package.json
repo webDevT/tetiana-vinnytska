@@ -19,7 +19,9 @@
     "normalize.css": "^8.0.1"
   },
   "dependencies": {
+    "@fancyapps/ui": "^6.1.8",
     "gulp-sass": "^5.1.0",
+    "jquery": "^3.7.1",
     "sass": "^1.54.3",
     "slick-carousel": "^1.8.1"
   }

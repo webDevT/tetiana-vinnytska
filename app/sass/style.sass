@@ -86,6 +86,7 @@ a
     font-family: $secondary-font
     font-weight: 600 
     line-height: 1
+    font-size: 1.88vw
     span 
         font-style: italic
         font-weight: 400
@@ -544,6 +545,72 @@ p
     align-items: center
     margin-bottom: 0.5vw
 //end services style 
+
+//start education style 
+.education 
+    padding-bottom: 0vw
+.education__image
+    width: 34.22vw
+    height: 36.46vw
+    display: flex 
+    justify-content: flex-end 
+    align-items: flex-end
+    position: relative
+    margin-top: -3vw
+.education__planet 
+    position: absolute
+    top: 7vw
+    left: 0
+.education__photo
+    position: relative
+    z-index: 99
+    width: 19.69vw
+.education__planet
+    width: 27.97vw
+.education__text
+    font-size: 2.08vw
+    font-family: $secondary-font
+    line-height: 1.2
+    margin-bottom: 2.083vw
+    span 
+        font-weight: 500
+.education__content
+    margin-top:7.08vw
+.slider-image-wrapper 
+    height: 16.5vw
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)
+    border-radius: 0.4vw
+.slider__item
+    padding: 3vw 1vw
+    border-radius: 0.4vw
+    .slider-image
+        max-height: 100%
+        width: auto
+        border-radius: 0.4vw
+        margin-left: auto 
+        margin-right: auto
+//end education style 
+.f-caption,
+.fancybox__thumbs,
+.f-counter
+    display: none
+.slider-wrapper 
+    position: relative
+.prev,
+.next
+    position: absolute
+    top: 50%
+    z-index: 99
+    cursor: pointer
+    img 
+        width: 0.8vw
+        display: block
+.prev
+    left: 0
+    transform: translateY(-50%) translateX(-250%)
+.next
+    right: 0
+    transform: translateY(-50%) translateX(250%)
 
 @import "media"
 

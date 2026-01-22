@@ -44,4 +44,106 @@ document.addEventListener('DOMContentLoaded', function() {
 			});
 		}
 	}
+
+	// Slick Slider initialization
+	const slider = document.querySelector('.slider');
+	if (slider) {
+		// Use jQuery ready to ensure libraries are loaded
+		if (typeof jQuery !== 'undefined') {
+			jQuery(document).ready(function($) {
+				if ($.fn.slick) {
+					$('.slider').slick({
+						slidesToShow: 3,
+						slidesToScroll: 1,
+						autoplay: false,
+						dots: true,
+						arrows: true,
+						infinite: true,
+						speed: 500,
+						fade: false,
+						cssEase: 'linear',
+						prevArrow: $('.slider-wrapper .prev'),
+						nextArrow: $('.slider-wrapper .next'),
+						responsive: [
+							{
+								breakpoint: 768,
+								settings: {
+									slidesToShow: 1
+								}
+							}
+						]
+					});
+				}
+			});
+		} else if (typeof window.$ !== 'undefined') {
+			window.$(document).ready(function($) {
+				if ($.fn.slick) {
+					$('.slider').slick({
+						slidesToShow: 3,
+						slidesToScroll: 1,
+						autoplay: false,
+						dots: true,
+						arrows: true,
+						infinite: true,
+						speed: 500,
+						fade: false,
+						cssEase: 'linear',
+						prevArrow: $('.slider-wrapper .prev'),
+						nextArrow: $('.slider-wrapper .next'),
+						responsive: [
+							{
+								breakpoint: 768,
+								settings: {
+									slidesToShow: 1
+								}
+							}
+						]
+					});
+				}
+			});
+		}
+	}
+
+	// Fancybox initialization
+	if (typeof jQuery !== 'undefined') {
+		jQuery(document).ready(function($) {
+			if (typeof Fancybox !== 'undefined') {
+				Fancybox.bind('[data-fancybox="gallery"]', {
+					Toolbar: {
+						display: {
+							left: [],
+							middle: [],
+							right: ["close"]
+						}
+					},
+					Thumbs: {
+						display: false
+					},
+					Caption: {
+						showOnStart: false
+					}
+				});
+			}
+		});
+	} else if (typeof window.$ !== 'undefined') {
+		window.$(document).ready(function($) {
+			if (typeof Fancybox !== 'undefined') {
+				Fancybox.bind('[data-fancybox="gallery"]', {
+					Toolbar: {
+						display: {
+							left: [],
+							middle: [],
+							right: ["close"]
+						}
+					},
+					Thumbs: {
+						display: false
+					},
+					Caption: {
+						showOnStart: false
+					}
+				});
+			}
+		});
+	}
 });
