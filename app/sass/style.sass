@@ -82,6 +82,7 @@ a
     line-height: 1
     span 
         font-style: italic
+        font-weight: 600
 .h3 
     font-family: $secondary-font
     font-weight: 600 
@@ -734,6 +735,9 @@ p
     .container-fluid
         width: 87vw
 .testimonials__slider
+    overflow: hidden
+    .slick-list
+        overflow: visible
     .slick-slide
         transition: transform 0.5s ease, opacity 0.5s ease
         transform: scale(0.5)
@@ -791,6 +795,48 @@ p
     img 
         width: 0.64vw
 //end testimonials style 
+
+//start subscription style 
+.subscription
+    padding-top: 11.51vw
+    padding-bottom: 4.17vw
+    position: relative
+    .h2 
+        margin-bottom: 2.5vw
+.subscription__form
+    width: 61.72vw
+    display: flex 
+    justify-content: space-between 
+    align-items: center 
+    margin-left: auto 
+    margin-right: auto
+    margin-top: 2.5vw
+    height: 4.01vw
+    input
+        height: 100%
+        width: 100%
+        background: #E5EEEB
+        border: none 
+        outline: none
+        border-radius: 2.6vw
+        padding-left: 1.67vw
+        padding-right: 1.67vw
+    input::placeholder
+        font-weight: 600
+        color: #005438
+    button
+        height: 100%
+        min-width: 19vw
+        margin-left: 1.25vw
+        border: none 
+.subscription-bg
+    position: absolute 
+    top: -1.82vw 
+    right: 5vw
+    img
+        width: 49.9vw     
+.testimonials__slider  
+    max-height: 30vw     
 
 
 @import "media"
