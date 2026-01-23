@@ -146,4 +146,68 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		});
 	}
+
+	// Testimonials Slider initialization
+	const testimonialsSlider = document.querySelector('.testimonials__slider');
+	if (testimonialsSlider) {
+		if (typeof jQuery !== 'undefined') {
+			jQuery(document).ready(function($) {
+				if ($.fn.slick) {
+					$('.testimonials__slider').slick({
+						slidesToShow: 3,
+						slidesToScroll: 1,
+						centerMode: true,
+						centerPadding: '0',
+						autoplay: false,
+						dots: true,
+						arrows: true,
+						infinite: true,
+						speed: 500,
+						fade: false,
+						cssEase: 'linear',
+						prevArrow: $('.testimonials__button-prev'),
+						nextArrow: $('.testimonials__button-next'),
+						responsive: [
+							{
+								breakpoint: 768,
+								settings: {
+									slidesToShow: 1,
+									centerMode: false
+								}
+							}
+						]
+					});
+				}
+			});
+		} else if (typeof window.$ !== 'undefined') {
+			window.$(document).ready(function($) {
+				if ($.fn.slick) {
+					$('.testimonials__slider').slick({
+						slidesToShow: 3,
+						slidesToScroll: 1,
+						centerMode: true,
+						centerPadding: '0',
+						autoplay: false,
+						dots: true,
+						arrows: true,
+						infinite: true,
+						speed: 500,
+						fade: false,
+						cssEase: 'linear',
+						prevArrow: $('.testimonials__button-prev'),
+						nextArrow: $('.testimonials__button-next'),
+						responsive: [
+							{
+								breakpoint: 768,
+								settings: {
+									slidesToShow: 1,
+									centerMode: false
+								}
+							}
+						]
+					});
+				}
+			});
+		}
+	}
 });
