@@ -8,6 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
 			menuBtn.classList.toggle('active');
 			menuWrapper.classList.toggle('active');
 		});
+
+		// Close menu when clicking on menu links
+		const menuLinks = menuWrapper.querySelectorAll('a[href^="#"]');
+		menuLinks.forEach(function(link) {
+			link.addEventListener('click', function() {
+				menuBtn.classList.remove('active');
+				menuWrapper.classList.remove('active');
+			});
+		});
 	}
 
 	// Language dropdown toggle

@@ -47,7 +47,7 @@
     25%
         transform: translate3d(0.5vw, -0.4vw, 10px) rotateY(3deg) rotateX(2deg) rotateZ(2deg) scale(0.96)
     50%
-        transform: translate3d(0.8vw, -0.6vw, -10px) rotateY(-3deg) rotateX(-2deg) rotateZ(-2deg) scale(0.94)
+        transform: translate3d(0.8vw, -0.8vw, -10px) rotateY(-3deg) rotateX(-2deg) rotateZ(-2deg) scale(0.94)
     75%
         transform: translate3d(0.3vw, -0.3vw, 8px) rotateY(2deg) rotateX(1deg) rotateZ(1deg) scale(0.97)
 
@@ -61,7 +61,51 @@
     75%
         transform: translate3d(2vw, -1.5vw, 15px) rotateY(8deg) rotateX(5deg) rotateZ(5deg) scale(0.95)
 
+@keyframes planetFloat
+    0%, 100%
+        transform: translate3d(0, 0, 0) rotate(0deg)
+    25%
+        transform: translate3d(0.3vw, -0.5vw, 0) rotate(0deg) scale(0.98)
+    50%
+        transform: translate3d(0.7vw, -0.8vw, 0) rotate(0deg) scale(1)
+    75%
+        transform: translate3d(0.2vw, -0.3vw, 0) rotate(0deg) scale(0.98)
+
+@keyframes iconFloat
+    0%, 100%
+        transform: translateY(-40%) translate3d(0, 0, 0) rotate(0deg) scale(1)
+    25%
+        transform: translateY(-40%) translate3d(0.2vw, -0.3vw, 0) scale(0.98)
+    50%
+        transform: translateY(-40%) translate3d(0.3vw, -0.5vw, 0) scale(1)
+    75%
+        transform: translateY(-40%) translate3d(0.1vw, -0.2vw, 0) scale(0.98)
+
+@keyframes iconRotate
+    0%
+        transform: rotate(0deg) scale(1)
+    25%
+        transform: rotate(90deg) scale(1.05)
+    50%
+        transform: rotate(180deg) scale(1)
+    75%
+        transform: rotate(270deg) scale(1.05)
+    100%
+        transform: rotate(360deg) scale(1)
+
+@keyframes starFloat
+    0%, 100%
+        transform: translate3d(0, 0, 0) rotate(0deg) scale(1)
+    25%
+        transform: translate3d(1vw, -1vw, 0) rotate(2deg) scale(0.98)
+    50%
+        transform: translate3d(2vw, -1.5vw, 0) rotate(-2deg) scale(1)
+    75%
+        transform: translate3d(1vw, -1vw, 0) rotate(1deg) scale(0.99)
+
 //start body style 
+html
+    scroll-behavior: smooth
 body
     font-family: $main-font
     font-size: 1.25vw
@@ -465,7 +509,7 @@ p
     top: 2vw
     right: 1vw
     width: 10.67vw
-    animation: iconFloat 15s ease-in-out infinite
+    animation: iconFloat 20s ease-in-out infinite
 //end about style 
 
 //start statistics style 
@@ -571,6 +615,7 @@ p
     width: 19.69vw
 .education__planet
     width: 27.97vw
+    animation: planetFloat 12s ease-in-out infinite
 .education__text
     font-size: 2.08vw
     font-family: $secondary-font
@@ -674,6 +719,19 @@ p
     margin-right: auto
     border-radius: 0.4vw
 //end video section style 
+.astro-child
+    position: relative
+    .star
+        position: absolute 
+        top: 0 
+        right: 11vw
+        width: 11.146vw
+        height: 11.146vw
+        z-index: 1
+        animation: starFloat 25s ease-in-out infinite
+    .container-fluid
+        position: relative
+        z-index: 2
 .astro-child__image
     position: relative
 .astro-child__image-img
@@ -687,6 +745,7 @@ p
     left: 1.82vw
     top: 0 
     transform: translateY(-40%)
+    animation: iconFloat 8s ease-in-out infinite
 .astro-child
     padding-top: 4.95vw
     padding-bottom: 6.25vw
@@ -726,7 +785,8 @@ p
     margin-right: 0.83vw 
     img 
         width: 2.92vw
-
+.astro-child__image-img
+    border-radius: 2.083vw 2.083vw 2.083vw 0
 //start testimonials style 
 .testimonials
     padding-top: 6.25vw
@@ -801,8 +861,18 @@ p
     padding-top: 11.51vw
     padding-bottom: 4.17vw
     position: relative
+    .container-fluid
+        position: relative
+        z-index: 2
     .h2 
         margin-bottom: 2.5vw
+        position: relative
+        img 
+            position: absolute  
+            top: -4.8vw
+            left: -7.3vw
+            width: 11.302vw
+            z-index: -1
 .subscription__form
     width: 61.72vw
     display: flex 
@@ -837,6 +907,9 @@ p
         width: 49.9vw     
 .testimonials__slider  
     max-height: 30vw     
+.icon
+    animation: iconRotate 25s linear infinite
+    
 //end subscription style 
 
 //start footer style 
